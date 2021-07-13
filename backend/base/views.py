@@ -39,9 +39,16 @@ def getProducts(request):
 
 @api_view(['GET'])
 def getProduct(request, pk):
-    product = None
-    for i in products:
-        if(i['_id'] == pk):
-            product = i
-            break
-    return Response(product)
+    product = Product.objects.get(_id=pk)
+    serializer = ProductSerializer(product, many=False) 
+    W  = '\033[0m'  # white (normal)
+    R  = '\033[31m' # red
+    G  = '\033[32m' # green
+    O  = '\033[33m' # orange
+    B  = '\033[34m' # blue
+    P  = '\033[35m' # purple
+
+    print(G)
+    print(f'8888888888888888 {serializer.data} 8888888888888888888')
+    print(W)
+    return Response(serializer.data)

@@ -12,9 +12,9 @@ export default function Product({ product }) {
       </Link>
       <Card.Body>
         <Link to={`/product/${product._id}`}>
-          <Card.Title as="div">
-            <strong>{product.name}</strong>
-          </Card.Title>
+          {/* <Card.Title as="div">
+            <strong>{product.description}</strong>
+          </Card.Title> */}
           <Card.Text as="div">
             <div className="my-3">
               <Rating
