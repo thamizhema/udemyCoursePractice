@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(blank=True, max_length=200, null=True)),
                 ('brand', models.CharField(blank=True, max_length=200, null=True)),
                 ('category', models.CharField(blank=True, max_length=200, null=True)),
-                ('desctiption', models.TextField(blank=True, null=True)),
+                ('description', models.TextField(blank=True, null=True)),
                 ('rating', models.DecimalField(blank=True, decimal_places=2, max_digits=7, null=True)),
                 ('numReviews', models.IntegerField(blank=True, default=0, null=True)),
                 ('price', models.DecimalField(blank=True, decimal_places=2, max_digits=7, null=True)),

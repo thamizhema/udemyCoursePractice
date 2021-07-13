@@ -32,7 +32,9 @@ def getRoute(request):
 @api_view(['GET'])
 def getProducts(request):
     products = Product.objects.all()
+    
     serializer = ProductSerializer(products, many=True)
+  
     return Response(serializer.data)
 
 @api_view(['GET'])
